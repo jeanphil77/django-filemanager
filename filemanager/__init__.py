@@ -190,13 +190,14 @@ class FileManager(object):
                     mimetype = magic.from_file(filepath, mime=True)
                     guessed_exts = mimetypes.guess_all_extensions(mimetype)
                     guessed_exts = [ext[1:] for ext in guessed_exts]
-                    common = [ext for ext in guessed_exts if ext in self.extensions]
-                    if not common:
-                        os.remove(filepath)
-                        messages.append(
-                            "File type not allowed : "
-                            + f.name
-                        )
+                    if self.extensions:
+                        common = [ext for ext in guessed_exts if ext in self.extensions]
+                        if not common:
+                            os.remove(filepath)
+                            messages.append(
+                                "File type not allowed : "
+                                + f.name
+                            )
             if len(messages) == 0:
                 messages.append('All files uploaded successfully')
         elif action == 'add':

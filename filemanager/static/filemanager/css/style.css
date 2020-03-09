@@ -86,12 +86,11 @@ body{
   color:#2030A0;
 }  
 .file{
-  width:82px;
-  height:94px;
-  overflow:hidden;  
+  max-width:120px;
+  overflow:hidden;
   padding: 4px;
   margin: 9px;
-  float:left;   
+  float:left;
   border: 1px solid #AAA;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -101,9 +100,10 @@ body{
   background:#dddff0;
 }  
 .thumbnail{
-  width:60px;
-  height:60px;
-  margin:10px;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10px;
 }
 .thumbnail div{
   width:60px;

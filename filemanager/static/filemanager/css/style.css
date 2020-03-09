@@ -37,6 +37,10 @@ body{
   border-radius: 6px;
   -moz-border-radius: 6px;  
   overflow-y:auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }  
 #status-bar{
   margin:0px 15px;
@@ -90,7 +94,6 @@ body{
   overflow:hidden;
   padding: 4px;
   margin: 9px;
-  float:left;
   border: 1px solid #AAA;
   border-radius: 4px;
   -moz-border-radius: 4px;

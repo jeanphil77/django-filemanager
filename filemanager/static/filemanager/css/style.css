@@ -115,9 +115,8 @@ body{
 }  
 .filename{
   text-align:center;
-  text-overflow:ellipsis;
-  overflow:hidden;
-  font:12px sans-serif;         
+  font:12px sans-serif;
+  word-break: break-all;
 }
 .menu{
   position:fixed;
